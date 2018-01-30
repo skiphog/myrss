@@ -27,7 +27,7 @@ $app = new Laravel\Lumen\Application(
 
 //$app->withEloquent();
 
-//$app->configure('rss');
+$app->configure('app');
 /*
 |--------------------------------------------------------------------------
 | Register Container Bindings

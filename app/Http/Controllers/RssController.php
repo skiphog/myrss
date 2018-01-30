@@ -18,6 +18,6 @@ class RssController extends Controller
 
     public function index($id, RssComponent $component)
     {
-        return response($component->getRss($id))->header('Content-Type', 'application/xml;charset=utf-8');
+        return response($component->getRss($id))->header('Content-Type', 'application/xml;charset=windows-1251');
     }
 }
