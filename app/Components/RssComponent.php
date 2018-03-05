@@ -6,7 +6,7 @@ use GuzzleHttp\Client;
 
 class RssComponent
 {
-    private const URL = 'http://nnm-club.me/forum/rss.php';
+    private const URL = 'http://docs.guzzlephp.org';
 
     private $client;
 
@@ -17,7 +17,17 @@ class RssComponent
 
     public function getRss(int $id): string
     {
-        return (string)$this->client->get($this->buildQuery($id))->getBody();
+        $result = $this->client->get(self::URL, [
+            'query'           => [
+                'f' => $id,
+                't' => 1
+            ],
+            'debug'           => true,
+            'connect_timeout' => 1.0,
+            'timeout' => 1.0
+        ]);
+
+        dd($result->getBody(), $result->getHeaders(), $result->getHeaders());
     }
 
     private function buildQuery($id): string
