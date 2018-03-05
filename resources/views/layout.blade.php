@@ -11,7 +11,7 @@
 <body>
 <div id="page-content"></div>
 <div id="pagination-demo"></div>
-<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="/js/jquery.twbsPagination.min.js"></script>
 <script>
   var json = JSON.parse('{!! json_encode($arr, JSON_UNESCAPED_UNICODE)  !!}');
